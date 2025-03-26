@@ -2,25 +2,25 @@
 
 This is a collection of examples that use the Java bindings for ROS2. They aim to mimic the rclcpp examples, but using the [ROS2 Java](https://github.com/esteve/ros2_java) bindings. Please follow the instructions on https://github.com/esteve/ros2_java/blob/master/README.md#desktop to build the ROS2 Java bindings, you can try out any of the following examples via the `ros2` command line tool:
 
-```sh
-. ~/ament_ws/install_isolated/local_setup.sh
-. ~/ros2_java_ws/install_isolated/local_setup.sh
+
+To compile this package you should make sure to use the [fixed version](https://github.com/EGAlberts/ament_gradle_plugin/tree/ivanpauno/gradle7.5-compatibility) of the ament_gradle_plugin which has to be locally built with gradle first. 
+
+```bash
+source /install/setup.sh
 ros2 run PACKAGE_NAME SCRIPT_NAME
 ```
 
 For example, to run the `PublisherLambda` and `SubscriberLambda` examples, open two terminals and type this on one of them to run the subscriber example:
 
-```sh
-. ~/ament_ws/install_isolated/local_setup.sh
-. ~/ros2_java_ws/install_isolated/local_setup.sh
+```nash
+source /install/setup.sh
 ros2 run rcljava_examples subscriber_lambda
 ```
 
 and the following to run the publisher examples on the other terminal:
 
-```sh
-. ~/ament_ws/install_isolated/local_setup.sh
-. ~/ros2_java_ws/install_isolated/local_setup.sh
+```bash
+source /install/setup.sh
 ros2 run rcljava_examples publisher_lambda
 ```
 
@@ -29,14 +29,14 @@ you should now see a bunch of messages showing up on the first terminal. A list 
 Alternatively, you can also run the examples by invoking the `java` command and the fully-qualified name of the class you wan to run. For example, type the following for running the `SubscriberLambda` example:
 
 ```sh
-. ~/ros2_java_ws/install_isolated/local_setup.sh
+source /install/setup.sh
 java org.ros2.rcljava.examples.subscriber.SubscriberLambda
 ```
 
 and this for the `PublisherLambda` example:
 
 ```sh
-. ~/ros2_java_ws/install_isolated/local_setup.sh
+source /install/setup.sh
 java org.ros2.rcljava.examples.publisher.PublisherLambda
 ```
 
